@@ -20,7 +20,7 @@ function ReturnVehicle() {
             <h2>Devolver Veículo</h2>
             <input
                 type="text"
-                placeholder="ID do Aluguel"
+                placeholder="Placa do Aluguel"
                 value={rentalId}
                 onChange={(e) => setRentalId(e.target.value)}
             />

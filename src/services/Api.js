@@ -1,17 +1,17 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/vehicles';
+const API_URL = 'http://localhost:8080/vehicles';
 
 const getVehicles = () => {
     return axios.get(API_URL);
 };
 
-const rentVehicle = (vehicleId) => {
-    return axios.post(`${API_URL}/${vehicleId}/rent`);
+const rentVehicle = (licensePlate) => {
+    return axios.post(`${API_URL}/${licensePlate}/rent`);
 };
 
-const returnVehicle = (rentalId) => {
-    return axios.post(`${API_URL}/return/${rentalId}`);
+const returnVehicle = (licensePlate) => {
+    return axios.post(`${API_URL}/${licensePlate}/return`);
 };
 
 export default {

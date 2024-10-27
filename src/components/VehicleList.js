@@ -13,7 +13,7 @@ function VehicleList() {
   const handleRent = (id) => {
     Api.rentVehicle(id)
       .then((rent) => {
-        alert("Veículo alugado com sucesso! ID gerado: " + rent.data.id);
+        alert("Veículo alugado com sucesso!");
         window.location.reload();
       })
       .catch((error) => {
@@ -45,7 +45,7 @@ function VehicleList() {
                 <td>
                   {!vehicle.rented && (
                     <a
-                      onClick={() => handleRent(vehicle.id)}
+                      onClick={() => handleRent(vehicle.licensePlate)}
                       className="waves-effect waves-light btn"
                     >
                       Alugar
