@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Api from "../services/Api";
+import { getVehicles } from "../services/getVehicles";
 
 function VehicleList() {
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
-    Api.getVehicles().then((response) => {
+    getVehicles().then((response) => {
       setVehicles(response.data);
     });
   }, []);

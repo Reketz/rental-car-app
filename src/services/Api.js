@@ -1,10 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/vehicles';
-
-const getVehicles = () => {
-    return axios.get(API_URL);
-};
+export const API_URL = 'http://localhost:8080/vehicles';
 
 const rentVehicle = (licensePlate) => {
     return axios.post(`${API_URL}/${licensePlate}/rent`);
@@ -15,7 +11,6 @@ const returnVehicle = (licensePlate) => {
 };
 
 export default {
-    getVehicles,
     rentVehicle,
     returnVehicle,
 };
